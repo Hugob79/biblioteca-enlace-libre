@@ -1,36 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+    
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
 
-        <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
-    </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
-            @include('layouts.navigation')
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-            <!-- Page Heading -->
-            <header class="bg-white shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    {{ $header }}
-                </div>
-            </header>
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
-        </div>
-    </body>
+    <!-- Favicon-->
+    <link rel="icon" type="image/jpg" href="imagenes/logo-enlace-libre.png">
+
+    <!-- link a bootstrap, sweetalert2  y Datatables-->
+    <link rel="stylesheet" href="bootstrap-local/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="bootstrap/PULSE-bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="sweetAlert2/sweetalert2.min.css"> -->
+    <link rel="stylesheet" href="animatecss/animate.min.css">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="fontawesome-free-5.15.2-web/css/all.min.css">
+
+    <title>Biblioteca EnlaceLibre</title>
+
+</head>
+<body>
+    <div id="app">
+
+        <main>
+            @yield('contenido_app')
+        </main>
+    </div>
+
+<!-- #region ZONA DE SCRIPTS -->
+
+    <!-- FONT AWESOME PARA ICONOS -->
+    <script src="fontawesome-free-5.15.2-web/js/all.min.js"></script>
+
+    <!-- scripts a Jquery, bootstrap, sweetAlert2 y DataTables  -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="bootstrap-local/js/bootstrap.min.js"></script>
+    <!-- <script src="sweetAlert2/sweetalert2.all.min.js"></script> -->
+<!-- #endregion -->
+
+</body>
 </html>
