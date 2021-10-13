@@ -38,7 +38,9 @@
     <div id="app">
 
         <main>
+            @include('barraSuperior')
             @yield('contenido_app')
+
         </main>
     </div>
 
