@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-info">
-  <a class="navbar-brand" href="/"><img src="/imagenes/biblioteca-enlace-libre.png" alt=""></a>
+  <a class="navbar-brand  animate__animated animate__bounce" href="/"><img src="/imagenes/biblioteca-enlace-libre.png" alt=""></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -10,22 +10,23 @@
             <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Proyecto/ayuda</a>
+            <a class="nav-link" href="/proyecto">Proyecto/ayuda</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Editá</a>
+            <a class="nav-link" href="/edita">Editá</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Doná</a>
+            <a class="nav-link" href="/colabora">Colaborá</a>
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Categorías
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="/">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <div class="dropdown-menu animate__animated animate__fadeInUp" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item alert-warning" href="/novela">Novela</a>
+            <a class="dropdown-item alert-warning" href="/cuento">Cuento</a>
+            <a class="dropdown-item alert-warning" href="/ensayo">Ensayo</a>
+            <a class="dropdown-item alert-warning" href="/poesia">Poesía</a>
             </div>
         </li>
         </ul>
