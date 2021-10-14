@@ -18,6 +18,7 @@ class CreateLibrosTable extends Migration
             $table->string('titulo');
             $table->string('genero');
             $table->string('descripcion');
+            $table->string('enlace_libro');
             $table->string('imagen');
             $table->string('usuario');
             $table->timestamps();

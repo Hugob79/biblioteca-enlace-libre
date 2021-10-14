@@ -27,6 +27,9 @@
     <!-- <link rel="stylesheet" href="bootstrap/PULSE-bootstrap.min.css"> -->
     <!-- <link rel="stylesheet" href="sweetAlert2/sweetalert2.min.css"> -->
     <link rel="stylesheet" href="animatecss/animate.min.css">
+
+    <!-- Local -->
+    <link rel="stylesheet" href="/css/estilo_local.css">
     
     <!-- FontAwesome -->
     <link rel="stylesheet" href="fontawesome-free-5.15.2-web/css/all.min.css">

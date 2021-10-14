@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>Biblioteca EnlaceLibre</title>
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
@@ -15,10 +15,16 @@
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
+
+        <link rel="stylesheet" href="bootstrap-local/css/bootstrap.min.css">
     </head>
     <body>
         <div class="font-sans text-gray-900 antialiased">
             {{ $slot }}
         </div>
+
+    <!-- scripts a Jquery, bootstrap, sweetAlert2 y DataTables  -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="bootstrap-local/js/bootstrap.min.js"></script>
     </body>
 </html>

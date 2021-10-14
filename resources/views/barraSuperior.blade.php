@@ -37,8 +37,11 @@
         <!-- Authentication Links -->
             @guest
             @if (Route::has('login'))
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}"><span class="text-light"><i class="fas fa-user-lock"></i> {{ __('login.login2') }}</span></a>
+                <li class="nav-item" style="float:left;">
+                    <a class="nav-link" href="/login"><span class="text-light"><i class="fas fa-user-lock"></i> {{ __('login.login2') }}</span></a>
+                </li>
+                <li class="nav-item" style="float:right;">
+                    <a class="nav-link" href="/register"><span class="text-light"><i class="fas fa-user-astronaut"></i> Registrarse</span></a>
                 </li>
             @endif
 

@@ -2,7 +2,7 @@
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+            <img src="/imagenes/biblioteca-enlace-libre.png" alt="logo biblioteca enlace libre">
             </a>
         </x-slot>
 
@@ -47,7 +47,7 @@
                     </a>
                 @endif
 
-                <x-button class="ml-3">
+                <x-button class="ml-3 btn btn-info">
                     {{ __('Log in') }}
                 </x-button>
             </div>

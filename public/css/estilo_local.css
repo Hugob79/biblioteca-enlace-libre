@@ -1,0 +1,6 @@
+.fondo_principal {
+    filter:blur(6px);
+    max-width: 300px;
+    float: right;
+    
+}
