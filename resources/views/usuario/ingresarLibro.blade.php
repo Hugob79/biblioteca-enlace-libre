@@ -26,7 +26,7 @@
         <label for="enlace_libro" class="mt-4">Subir Libro en PDF</label>
         <input type="file" accept="application/pdf" name="enlace_libro" id="enlace_libro" class="alert-success form-control" required>
         @error('enlace_libro') <span class="error text-danger">{{ $message }}</span> @enderror
-        <input type="submit" value="Enviar" class="btn btn-info">
+        <input type="submit" value="Enviar" class="mt-3 btn btn-lg btn-info">
     </form>
 
 </div>

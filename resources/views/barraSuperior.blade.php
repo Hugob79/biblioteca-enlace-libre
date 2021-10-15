@@ -47,24 +47,32 @@
 
             @else
                 <li class="nav-item dropdown">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{ Auth::user()->name }}
+                    <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        INGRESASTE COMO----> {{ Auth::user()->name }}
                     </a>
-
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('logout') }}"
+                    
+                    <div class="dropdown-menu animate__animated animate__fadeInUp" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item alert-warning" href="/usuario">Mis Libros</a>
+                        <a class="dropdown-item alert-warning" href="/ingresarLibro">Cargar libro nuevo</a>
+                        <a class="dropdown-item alert-warning" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
+                           Salir
                         </a>
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                    
+                    <a class="dropdown-item alert-warning" href="/ensayo">Ensayo</a>
+                    <a class="dropdown-item alert-warning" href="/poesia">Poesía</a>
                     </div>
                 </li>
+
+
             @endguest
         </ul>
+
+       
 
 
 </nav>
