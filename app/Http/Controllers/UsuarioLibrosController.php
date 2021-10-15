@@ -26,23 +26,41 @@ class UsuarioLibrosController extends Controller
 
     public function recibeLibro(Request $request)
     {
+        $request->validate([
+            'imagen'=>'image|max:1024',
+            'enlace_libro'=>'required|file|max:5000|mimes:pdf'
+    
+        ]);
+
+        $usuarioID = auth()->id();
         $libroNuevo = request()->except('_token');
-        if ($request->hasFile('imagen')){
-            $libroNuevo['imagen']=$request->file('imagen')->store('uploads', 'public');
+
+        if ($libroNuevo['imagen'] != null)
+        {
+            $nombreImagen = rand (0, 999) . $request->file('imagen')->getClientOriginalName();
+            $urlImagen = "/storage/libros_imagenes/". $nombreImagen;
+            $request->file('imagen')->storeAs('public/libros_imagenes', $nombreImagen);
+            $libroNuevo['imagen']= $urlImagen;
         }else{
             $libroNuevo['imagen']="/imagenes/sin-imagen.jpg";
         }
 
-        if ($request->hasFile('enlace_libro'))
+        if ($libroNuevo['enlace_libro'] != null)
         {
-            $libroNuevo['enlace_libro']=$request->file('enlace_libro')->store('uploads', 'public');
+            $nombreLibro = rand (0, 999) . $request->file('enlace_libro')->getClientOriginalName();
+            $urlLibro = "/storage/libros_pdf/". $nombreLibro;
+            $request->file('enlace_libro')->storeAs('public/libros_pdf', $nombreLibro);
+            $libroNuevo['enlace_libro']  = $urlLibro;
         }else{
             return "El libro es obligatorio!";
         }
-
+        $libroNuevo['usuario'] = $usuarioID;
+        $libroNuevo['created_at'] = date('Y-m-d H:i:s');
         Libro::insert($libroNuevo);
         return response()->json($libroNuevo);
 
         //return view ('usuario.datosCargados');
+
+        
     }
 }
