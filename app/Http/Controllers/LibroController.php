@@ -13,24 +13,34 @@ class LibroController extends Controller
         return view('inicio', ['libros'=>$libros]);
     }
 
-    public function novela()
+    public function listadoLibros (Request $request) //esta funcion es para listar los libros
     {
-        return view('libros.novela');
-    }
+        $genero = $request->get('genero');
+        
+        $libros = Libro::where('genero', $genero)->get();
 
-    public function cuento()
-    {
-        return view('libros.cuento');
-    }
-
-    public function ensayo()
-    {
-        return view('libros.ensayo');
-    }
-
-    public function poesia()
-    {
-        return view('libros.poesia');
+        if ($genero == 'novela')
+        {
+            $genero = "Novela";
+        }
+        elseif ($genero == 'cuento')
+        {
+            $genero = "Cuento";
+        }
+        elseif ($genero == 'ensayo')
+        {
+            $genero = "Ensayo";
+        }
+        elseif ($genero == 'poesia')
+        {
+            $genero = "Poesía";
+        }
+        else
+        {
+            $genero = "Sin resuldados";
+        }
+        return view('libros.listadoPorGenero', ["libros"=>$libros, "genero"=>$genero]);
+        //return response()->json('hola');
     }
 
 

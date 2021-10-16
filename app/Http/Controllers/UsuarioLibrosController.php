@@ -13,10 +13,10 @@ class UsuarioLibrosController extends Controller
     public function index()
     {
         $usuarioID = auth()->id();
-        //dd($usuarioID);
-        $libros = Libro::where('usuario', $usuarioID);
+    
+        $libros = Libro::where('usuario', $usuarioID)->get();
         
-        return view('usuario.listado-libros');
+        return view('usuario.listado-libros', ['libros'=>$libros]);
     }
 
     public function ingresarLibro()

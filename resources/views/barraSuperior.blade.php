@@ -23,10 +23,27 @@
             Categorías
             </a>
             <div class="dropdown-menu animate__animated animate__fadeInUp" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item alert-warning" href="/novela">Novela</a>
-            <a class="dropdown-item alert-warning" href="/cuento">Cuento</a>
-            <a class="dropdown-item alert-warning" href="/ensayo">Ensayo</a>
-            <a class="dropdown-item alert-warning" href="/poesia">Poesía</a>
+            
+            <form action="/listadoLibros"  method="POST">
+            @csrf
+            <input type="hidden" name="genero" value="novela">
+            <button class="dropdown-item alert-warning" type="submit">Novela</button>
+            </form>
+            <form action="/listadoLibros"  method="POST">
+            @csrf
+            <input type="hidden" name="genero" value="cuento">
+            <button class="dropdown-item alert-warning" type="submit">Cuento</button>
+            </form>
+            <form action="/listadoLibros"  method="POST">
+            @csrf
+            <input type="hidden" name="genero" value="ensayo">
+            <button class="dropdown-item alert-warning" type="submit">Ensayo</button>
+            </form>
+            <form action="/listadoLibros"  method="POST">
+            @csrf
+            <input type="hidden" name="genero" value="poesia">
+            <button class="dropdown-item alert-warning" type="submit">Poesía</button>
+            </form>
             </div>
         </li>
         </ul>
@@ -62,9 +79,6 @@
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf
                             </form>
-                    
-                    <a class="dropdown-item alert-warning" href="/ensayo">Ensayo</a>
-                    <a class="dropdown-item alert-warning" href="/poesia">Poesía</a>
                     </div>
                 </li>
 
