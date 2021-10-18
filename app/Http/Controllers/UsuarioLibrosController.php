@@ -27,15 +27,16 @@ class UsuarioLibrosController extends Controller
     public function recibeLibro(Request $request)
     {
         $request->validate([
-            'imagen'=>'image|max:1024',
+            'imagen'=>'image|max:1024|mimes:jpeg,png,jpg'
             'enlace_libro'=>'required|file|max:5000|mimes:pdf'
     
         ]);
 
         $usuarioID = auth()->id();
         $libroNuevo = request()->except('_token');
-
-        if ($libroNuevo['imagen'] != null)
+        //dd($libroNuevo);
+      
+        if (count($libroNuevo) == 5)
         {
             $nombreImagen = rand (0, 999) . $request->file('imagen')->getClientOriginalName();
             $urlImagen = "/storage/libros_imagenes/". $nombreImagen;
@@ -44,7 +45,7 @@ class UsuarioLibrosController extends Controller
         }else{
             $libroNuevo['imagen']="/imagenes/sin-imagen.jpg";
         }
-
+       
         if ($libroNuevo['enlace_libro'] != null)
         {
             $nombreLibro = rand (0, 999) . $request->file('enlace_libro')->getClientOriginalName();
@@ -57,8 +58,12 @@ class UsuarioLibrosController extends Controller
         $libroNuevo['usuario'] = $usuarioID;
         $libroNuevo['created_at'] = date('Y-m-d H:i:s');
         Libro::insert($libroNuevo);
-        return response()->json($libroNuevo);
-
+        
+        $usuarioID = auth()->id();
+        $libros = Libro::where('usuario', $usuarioID)->get();
+        
+        return view('usuario.listado-libros', ['libros'=>$libros]);
+        //return response()->json($libroNuevo);
         //return view ('usuario.datosCargados');
 
         
