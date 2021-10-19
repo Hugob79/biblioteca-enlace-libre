@@ -31,6 +31,9 @@
     <!-- Local -->
     <link rel="stylesheet" href="/css/estilo_local.css">
     
+    <!-- Datatables -->
+    <link rel="stylesheet" href="Datatables/jquery.dataTables.min.css">
+
     <!-- FontAwesome -->
     <link rel="stylesheet" href="fontawesome-free-5.15.2-web/css/all.min.css">
 
@@ -56,7 +59,17 @@
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="bootstrap-local/js/bootstrap.min.js"></script>
     <!-- <script src="sweetAlert2/sweetalert2.all.min.js"></script> -->
-<!-- #endregion -->
+
+    <!-- DATATABLES -->
+    <script src="Datatables/jquery.dataTables.min.js"></script>
+    <script src="Datatables/dataTables.buttons.min.js"></script>
+    <script src="Datatables/jszip.min.js"></script>
+    <script src="Datatables/pdfmake.min.js"></script>
+    <script src="Datatables/vfs_fonts.js"></script>
+    <script src="Datatables/buttons.html5.min.js"></script>
+    <script src="Datatables/buttons.print.min.js"></script>
+
+    <!-- #endregion -->
 
 </body>
 </html>

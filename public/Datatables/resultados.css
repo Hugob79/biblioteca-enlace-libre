@@ -1,0 +1,94 @@
+#contenedor_formu{
+    align-items: center;
+    width: 90%;
+    height: auto;
+    /*background-color: red;*/
+}
+#titulo_formu{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    background-color: rgb(175, 175, 175);
+    font-weight: bold;
+    font-family: arial;
+    width: 100%;
+    height: 55px;
+}
+#tabla_formu{
+    align-items: center;
+    width: 100%;
+
+}
+#tabla_interna{
+    border: 3px;
+    margin: 0 auto; 
+    width: 100%;
+}
+td{
+    border:3px solid;
+    padding-left: 9px;
+    font-weight: bold;
+}
+th{
+    border-right:3px solid;
+    border-bottom:3px solid;
+    border-left:3px solid;
+    padding-left: 9px;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+#titulos_internos{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background-color: rgb(175, 175, 175);
+    font-weight: bold;
+
+}
+
+#espacio_firma{
+    height: 300px;
+
+}
+#items-firma1{
+    min-width: 25%; 
+    width: 25%; 
+    max-width: 30%; 
+}
+#items-firma2{
+    min-width: 74%; 
+    width: 69%; 
+    max-width: 74%; 
+}
+#problema1{
+    min-height: 200px; 
+    height: 200px; 
+    max-width: 500px; 
+}
+#items-firma3{
+    width: 50%;
+}
+#espacio-firma{
+    height: 300px;
+}
+textarea
+{
+width:99%;
+}
+.textwrapper
+{
+border:1px solid #999999;
+margin:5px 0;
+padding:3px;
+}
+
+#comentarios{
+    min-height: 200px; 
+    height: 200px; 
+    max-width: 500px; 
+}
+#roles{
+    min-height: 100px; 
+    height: 100px; 
+}
