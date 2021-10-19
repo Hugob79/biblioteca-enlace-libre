@@ -27,7 +27,7 @@ class UsuarioLibrosController extends Controller
     public function recibeLibro(Request $request)
     {
         $request->validate([
-            'imagen'=>'image|max:1024|mimes:jpeg,png,jpg'
+            'imagen'=>'image|max:1024|mimes:jpeg,png,jpg',
             'enlace_libro'=>'required|file|max:5000|mimes:pdf'
     
         ]);
