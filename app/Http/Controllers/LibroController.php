@@ -11,7 +11,7 @@ class LibroController extends Controller
 {
     public function index()
     {
-        $libros = Libro::Paginate(2);
+        $libros = Libro::Paginate(10);
         return view('inicio', ['libros'=>$libros]);
     }
 
@@ -23,7 +23,7 @@ class LibroController extends Controller
         $libros = DB::table('libros as lib')
         ->join('users AS usu', 'lib.usuario', '=', 'usu.id')
         ->select('lib.titulo AS titulo', 'lib.genero AS genero', 'lib.descripcion AS descripcion', 
-        'lib.imagen AS imagen', 'lib.enlace_libro AS enlace_libro', 'usu.name AS autor')
+        'lib.imagen AS imagen', 'lib.enlace_libro AS enlace_libro', 'lib.autor AS autor', 'usu.name AS subido_por')
         ->where('lib.genero', $genero)
         ->get();
 

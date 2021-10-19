@@ -70,6 +70,6 @@
     <script src="Datatables/buttons.print.min.js"></script>
 
     <!-- #endregion -->
-
+    @include('usuario.script_datatables')
 </body>
 </html>

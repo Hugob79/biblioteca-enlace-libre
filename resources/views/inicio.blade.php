@@ -14,6 +14,7 @@
             <img src="{{$libro->imagen}}" class="card-img-top" width="250px" alt="Tapa Libro">
             <div class="card-body">
                 <h5 class="card-title">{{$libro->titulo}}</h5>
+                <h6 class="card-title">{{$libro->autor}}</h6>
                 <p class="card-text">{{$libro->descripcion}}</p>
                 <a href="{{$libro->enlace_libro}}" target="_blank" class="btn btn-success">Descargar</a>
             </div>
@@ -22,5 +23,8 @@
         @endforeach
 
     </div>
-{!! $libros->links() !!}
+    <div id="paginacion" class="container mt-3">
+        {{$libros->links()}}
+    </div>
+
 @endsection

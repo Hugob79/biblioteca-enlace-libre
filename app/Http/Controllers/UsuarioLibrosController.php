@@ -36,7 +36,7 @@ class UsuarioLibrosController extends Controller
         $libroNuevo = request()->except('_token');
         //dd($libroNuevo);
       
-        if (count($libroNuevo) == 5)
+        if (count($libroNuevo) == 6) //esta es la cantidad del array si no esta la imagen
         {
             $nombreImagen = rand (0, 999) . $request->file('imagen')->getClientOriginalName();
             $urlImagen = "/storage/libros_imagenes/". $nombreImagen;

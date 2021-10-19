@@ -2,5 +2,11 @@
     filter:blur(6px);
     max-width: 300px;
     float: right;
+    /* position:absolute; */
     
+}
+
+#paginacion{
+    display:inline-block; 
+    position:relative
 }

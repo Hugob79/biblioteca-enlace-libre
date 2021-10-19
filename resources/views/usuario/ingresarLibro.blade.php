@@ -1,7 +1,8 @@
 @extends('layouts.app')
 @section('contenido_app')
 
-<div class="container">
+<div class="container mt-4">
+    <h3>Ingresar libro nuevo</h3>
     <form action="/recibeLibro" class="form-group" method="POST" enctype="multipart/form-data">
     @csrf
 
@@ -15,6 +16,9 @@
             <option value="ensayo">Ensayo</option>
             <option value="poesia">Poesia</option>
         </select>
+
+        <label for="autor" class="mt-4">Autor del libro</label>
+        <input type="text" id="autor" name="autor" class="form-control" required>
 
         <label for="descripcion" class="mt-4">Breve reseña:</label>
         <textarea name="descripcion" id="descripcion" cols="5" rows="3" class="form-control" required></textarea>

@@ -65,7 +65,7 @@
             @else
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        INGRESASTE COMO----> {{ Auth::user()->name }}
+                        Usuario: {{ Auth::user()->name }}
                     </a>
                     
                     <div class="dropdown-menu animate__animated animate__fadeInUp" aria-labelledby="navbarDropdownMenuLink">

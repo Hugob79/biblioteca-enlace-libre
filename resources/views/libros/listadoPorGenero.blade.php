@@ -10,6 +10,7 @@
                     <th>Titulo</th>
                     <th>Descripcion</th>
                     <th>Autor</th>
+                    <th>Subido por:</th>
                     <th>Tapa</th>
                     <th>Descargar</th>
                 </tr>
@@ -21,6 +22,7 @@
                     <td>{{$libro->titulo}}</td>
                     <td>{{$libro->descripcion}}</td>
                     <td>{{$libro->autor}}</td>
+                    <td>{{$libro->subido_por}}</td>
                     <td><img src="{{$libro->imagen}}" width="200px" alt="Libro"></td>
                     <td><a href="{{$libro->enlace_libro}}" target="_blank"><button class="btn btn-danger">Descargar</button></a></td>
                 </tr>
