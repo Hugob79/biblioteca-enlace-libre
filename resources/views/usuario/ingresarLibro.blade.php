@@ -22,7 +22,8 @@
 
         <label for="descripcion" class="mt-4">Breve reseña:</label>
         <textarea name="descripcion" id="descripcion" cols="5" rows="3" class="form-control" required></textarea>
-
+        <div style="display:inline-block;"> @error('descripcion') <span class="error text-danger">{{ $message }}</span> @enderror </div>
+        <br>
         <label for="imagen" class="mt-4">Imagen de Tapa</label>
         <input type="file" name="imagen" id="imagen" class="alert-success form-control" value="Subir imagen">
         @error('imagen') <span class="error text-danger">{{ $message }}</span> @enderror

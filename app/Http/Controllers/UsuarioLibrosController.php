@@ -28,8 +28,8 @@ class UsuarioLibrosController extends Controller
     {
         $request->validate([
             'imagen'=>'image|max:1024|mimes:jpeg,png,jpg',
-            'enlace_libro'=>'required|file|max:5000|mimes:pdf'
-    
+            'enlace_libro'=>'required|file|max:5000|mimes:pdf',
+            'descripcion'=> 'max:255'
         ]);
 
         $usuarioID = auth()->id();

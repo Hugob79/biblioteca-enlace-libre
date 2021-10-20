@@ -5,7 +5,7 @@
   </button>
   
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav" id="items-navegacion">
         <li class="nav-item active">
             <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
         </li>
