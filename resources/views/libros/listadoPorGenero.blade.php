@@ -35,10 +35,6 @@
     @endif
 </div>
 
-<div style="display:block;" class="container mt-3">
-   {{$libros->links()}}
-</div>
-
 
 <script>
 let buscaUsuario = async() =>
