@@ -18,6 +18,18 @@
     position:relative
 }
 
+.librosPrincipal{
+  width: 18rem; 
+  height:800px; 
+  float:left; 
+  border: solid 2px green;
+}
+
+#tabla-resultados{
+  
+}
+
+
 /* algunas cosillas de Datatables */
 .dataTables_filter input {
     align-items: center;
