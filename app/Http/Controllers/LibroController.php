@@ -11,7 +11,7 @@ class LibroController extends Controller
 {
     public function index()
     {
-        $libros = Libro::Paginate(10);
+        $libros = Libro::latest()->take(12)->get();
         return view('inicio', ['libros'=>$libros]);
     }
 
