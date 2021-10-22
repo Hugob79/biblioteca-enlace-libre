@@ -1,11 +1,11 @@
 @extends('layouts.app')
 @section('contenido_app')
 
-<div class="container mt-4">
+<div class="m-5">
     <h1>Listado de Libros - Género: <b>{{$genero}}</b></h1>
+    <div>
     @if (count($libros) != 0)
-        
-        <table class="table table-info table-bordered table-hover table-responsive">
+        <table class="table table-info table-striped table-bordered table-hover">
             <thead>
                 <tr>
                     <th>Titulo</th>
@@ -34,9 +34,18 @@
     <h4>Sin resultados para la categoria seleccionada</h4>
     @endif
 </div>
+</div>
+@if ($libros->hasMorePages())
+<section>
+    <div class="botonera_y_paginacion">
+        {{$libros->links()}}
+    </div>
+</section>
+@endif
 
 
 <script>
+//Esto no esta en uso
 let buscaUsuario = async() =>
 {
     let usuBuscar = document.getElementById('buscaUsuario').value

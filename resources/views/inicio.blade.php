@@ -26,29 +26,11 @@
     </div>
 
     <section>
-        <div class="row ml-1 text-center">
-            
-            <form action="/listadoLibros"  method="POST">
-            @csrf
-                <input type="hidden" name="genero" value="novela">
-                <button class="btn btn-outline-info m-1" type="submit">Novela</button>
-                </form>
-                <form action="/listadoLibros"  method="POST">
-                @csrf
-                <input type="hidden" name="genero" value="cuento">
-                <button class="btn btn-outline-info m-1" type="submit">Cuento</button>
-                </form>
-                <form action="/listadoLibros"  method="POST">
-                @csrf
-                <input type="hidden" name="genero" value="ensayo">
-                <button class="btn btn-outline-info m-1" type="submit">Ensayo</button>
-                </form>
-                <form action="/listadoLibros"  method="POST">
-                @csrf
-                <input type="hidden" name="genero" value="poesia">
-                <button class="btn btn-outline-info m-1" type="submit">Poesía</button>
-            </form>
-        
+        <div class="botonera_y_paginacion">
+            <a href="/novela" class="btn btn-outline-info m-1">Novela</a>
+            <a href="/cuento" class="btn btn-outline-info m-1">Cuento</a>
+            <a href="/ensayo" class="btn btn-outline-info m-1">Ensayo</a>
+            <a href="/poesia" class="btn btn-outline-info m-1">Poesía</a> 
         </div>
     </section>
 

@@ -23,27 +23,10 @@
             Categorías
             </a>
             <div class="dropdown-menu animate__animated animate__fadeInUp" aria-labelledby="navbarDropdownMenuLink">
-            
-            <form action="/listadoLibros"  method="POST">
-            @csrf
-            <input type="hidden" name="genero" value="novela">
-            <button class="dropdown-item alert-warning" type="submit">Novela</button>
-            </form>
-            <form action="/listadoLibros"  method="POST">
-            @csrf
-            <input type="hidden" name="genero" value="cuento">
-            <button class="dropdown-item alert-warning" type="submit">Cuento</button>
-            </form>
-            <form action="/listadoLibros"  method="POST">
-            @csrf
-            <input type="hidden" name="genero" value="ensayo">
-            <button class="dropdown-item alert-warning" type="submit">Ensayo</button>
-            </form>
-            <form action="/listadoLibros"  method="POST">
-            @csrf
-            <input type="hidden" name="genero" value="poesia">
-            <button class="dropdown-item alert-warning" type="submit">Poesía</button>
-            </form>
+                <a href="/novela" class="dropdown-item alert-warning">Novela</a>
+                <a href="/cuento" class="dropdown-item alert-warning">Cuento</a>
+                <a href="/ensayo" class="dropdown-item alert-warning">Ensayo</a>
+                <a href="/poesia" class="dropdown-item alert-warning">Poesía</a> 
             </div>
         </li>
         </ul>

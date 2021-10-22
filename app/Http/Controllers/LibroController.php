@@ -15,41 +15,61 @@ class LibroController extends Controller
         return view('inicio', ['libros'=>$libros]);
     }
 
-    public function listadoLibros (Request $request) //esta funcion es para listar los libros
+    public function novela()
     {
-        $genero = $request->get('genero');
-        
-        //$libros = Libro::where('genero', $genero)->get();
+        $genero = "Novela";
+
         $libros = DB::table('libros as lib')
         ->join('users AS usu', 'lib.usuario', '=', 'usu.id')
         ->select('lib.titulo AS titulo', 'lib.genero AS genero', 'lib.descripcion AS descripcion', 
         'lib.imagen AS imagen', 'lib.enlace_libro AS enlace_libro', 'lib.autor AS autor', 'usu.name AS subido_por')
-        ->where('lib.genero', $genero)
-        ->get();
+        ->where('lib.genero', "novela")
+        ->Paginate(15);
 
-        if ($genero == 'novela')
-        {
-            $genero = "Novela";
-        }
-        elseif ($genero == 'cuento')
-        {
-            $genero = "Cuento";
-        }
-        elseif ($genero == 'ensayo')
-        {
-            $genero = "Ensayo";
-        }
-        elseif ($genero == 'poesia')
-        {
-            $genero = "Poesía";
-        }
-        else
-        {
-            $genero = "Sin resultados";
-        }
+        return view('libros.listadoPorGenero', ["libros"=>$libros, "genero"=>$genero]);
+    }
+
+    public function cuento()
+    {
+        $genero = "Cuento";
+        
+        $libros = DB::table('libros as lib')
+        ->join('users AS usu', 'lib.usuario', '=', 'usu.id')
+        ->select('lib.titulo AS titulo', 'lib.genero AS genero', 'lib.descripcion AS descripcion', 
+        'lib.imagen AS imagen', 'lib.enlace_libro AS enlace_libro', 'lib.autor AS autor', 'usu.name AS subido_por')
+        ->where('lib.genero', "cuento")
+        ->Paginate(15);
+
+        return view('libros.listadoPorGenero', ["libros"=>$libros, "genero"=>$genero]);
+    }
+
+    public function ensayo()
+    {
+        $genero = "Ensayo";
+        
+        $libros = DB::table('libros as lib')
+        ->join('users AS usu', 'lib.usuario', '=', 'usu.id')
+        ->select('lib.titulo AS titulo', 'lib.genero AS genero', 'lib.descripcion AS descripcion', 
+        'lib.imagen AS imagen', 'lib.enlace_libro AS enlace_libro', 'lib.autor AS autor', 'usu.name AS subido_por')
+        ->where('lib.genero', "ensayo")
+        ->Paginate(2);
+
+        return view('libros.listadoPorGenero', ["libros"=>$libros, "genero"=>$genero]);
+    }
+
+    public function poesia()
+    {
+        $genero = "Poesía";
+        
+        $libros = DB::table('libros as lib')
+        ->join('users AS usu', 'lib.usuario', '=', 'usu.id')
+        ->select('lib.titulo AS titulo', 'lib.genero AS genero', 'lib.descripcion AS descripcion', 
+        'lib.imagen AS imagen', 'lib.enlace_libro AS enlace_libro', 'lib.autor AS autor', 'usu.name AS subido_por')
+        ->where('lib.genero', "poesia")
+        ->Paginate(15);
+
         return view('libros.listadoPorGenero', ["libros"=>$libros, "genero"=>$genero]);
         //return response()->json('hola');
     }
-
 
 }
