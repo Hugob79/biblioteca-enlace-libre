@@ -3,12 +3,9 @@
     <div class="alert-warning m-3 p-3">
         <h5 align="center">Bienvenido a la Biblioteca de publicaciones con licenias libres</h5>
     </div>
-{{-- <div class="fondo_principal">
-<img src="/imagenes/vaguito.png" alt="Hombre Leyendo...">
-</div> --}}
 
     <div class="row m-3 p-3">
-        <h4>Últimos libros añadidos</h4>
+        <img src="/imagenes/ultimos-libros.png" class="img-fluid" alt="Ultimos Libros Agregados">
         <section class="text-center">
             @foreach ($libros as $libro )
             <div class="card p-3 m-1 librosPrincipal">

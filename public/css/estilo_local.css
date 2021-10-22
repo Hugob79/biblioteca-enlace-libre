@@ -1,9 +1,5 @@
-.fondo_principal {
-    filter:blur(6px);
-    max-width: 300px;
-    float: right;
-    /* position:absolute; */
-    
+body{
+  background-image: url("/imagenes/fondo-libre1.jpg");
 }
 
 #items-navegacion
