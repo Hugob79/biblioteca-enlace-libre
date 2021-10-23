@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('contenido_app')
 <div class="container mt-4">
-    <h1>Acerca de este proyecto</h1>
+    <img src="/imagenes/acerca-de-este-proyecto.png" class="img-fluid" alt="Acerca de este proyecto">
     <p>Bienvenido a Biblioteca EnlaceLibre. Este proyecto surgió a partir de la materia "Culturas Digitales Libres" de la 
     Universidad Nacional del Litoral, donde me encuentro realizado la Tecnicatura en Software Libre.</p>
     <p>La idea es reunir en este sitio textos en formato PDF exclusivamente con licencias CC, es decir,
