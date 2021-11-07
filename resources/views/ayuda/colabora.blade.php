@@ -12,7 +12,7 @@
         <p>-Poder mejorar el sitio y poder compartir dichas mejoras para beneficio de todos.</p>
         <br>
         <hr>
-        <p>Si querés colaborar en este proyecto, <a href="mailto:enlacepilar@gmail.com">escribime.</a></p>
+        <p>Si querés colaborar en este proyecto, <a href="mailto:enlacepilar@protonmail.com">escribime.</a></p>
     </div>
 </div>
 @endsection

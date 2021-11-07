@@ -1,11 +1,11 @@
 @extends('layouts.app')
 @section('contenido_app')
 
-<div class="m-5">
+<div class="m-5 p-3">
     <h1>Listado de Libros - Género: <b>{{$genero}}</b></h1>
     <div>
     @if (count($libros) != 0)
-        <table class="table table-info table-striped table-bordered table-hover">
+        <table class="table table-info table-striped table-bordered table-hover" id="tabla_resultados">
             <thead>
                 <tr>
                     <th>Titulo</th>
