@@ -7,6 +7,7 @@
     <table class="table table-info table-bordered table-hover" id="tabla_resultados">
         <thead>
             <tr>
+                <th>Fecha Alta:</th>
                 <th>Título</th>
                 <th>Género</th>
                 <th>Descripción</th>
@@ -20,6 +21,7 @@
         <tbody>
             @foreach ($libros as $libro )
             <tr>
+                <td>{{date("d/m/Y", strtotime($libro->created_at))}}</td>
                 <td>{{$libro->titulo}}</td>
                 <td>{{$libro->genero}}</td>
                 <td>{{$libro->descripcion}}</td>

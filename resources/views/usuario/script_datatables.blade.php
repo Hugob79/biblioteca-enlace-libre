@@ -6,6 +6,7 @@ $('#tabla_resultados').DataTable
     "bFilter": true,
     "bInfo": true,
     "bAutoWidth": true,
+	"order": [[ 0, "desc" ]],
 	pageLength : 10,
 	lengthMenu: [[5, 10, 20, -1], [5, 10, 20, 'Todos']],
 	language: 

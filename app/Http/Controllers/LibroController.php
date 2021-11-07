@@ -22,9 +22,13 @@ class LibroController extends Controller
         $libros = DB::table('libros as lib')
         ->join('users AS usu', 'lib.usuario', '=', 'usu.id')
         ->select('lib.titulo AS titulo', 'lib.genero AS genero', 'lib.descripcion AS descripcion', 
-        'lib.imagen AS imagen', 'lib.enlace_libro AS enlace_libro', 'lib.autor AS autor', 'usu.name AS subido_por')
+        'lib.imagen AS imagen', 'lib.enlace_libro AS enlace_libro', 'lib.autor AS autor', 
+        'lib.created_at', 'usu.name AS subido_por')
         ->where('lib.genero', "novela")
-        ->Paginate(15);
+        ->get();
+        //->Paginate(15);
+
+        //dd($libros);
 
         return view('libros.listadoPorGenero', ["libros"=>$libros, "genero"=>$genero]);
     }
@@ -36,9 +40,11 @@ class LibroController extends Controller
         $libros = DB::table('libros as lib')
         ->join('users AS usu', 'lib.usuario', '=', 'usu.id')
         ->select('lib.titulo AS titulo', 'lib.genero AS genero', 'lib.descripcion AS descripcion', 
-        'lib.imagen AS imagen', 'lib.enlace_libro AS enlace_libro', 'lib.autor AS autor', 'usu.name AS subido_por')
+        'lib.imagen AS imagen', 'lib.enlace_libro AS enlace_libro', 'lib.autor AS autor', 
+        'lib.created_at', 'usu.name AS subido_por')
         ->where('lib.genero', "cuento")
-        ->Paginate(15);
+        ->get();
+        //->Paginate(15);
 
         return view('libros.listadoPorGenero', ["libros"=>$libros, "genero"=>$genero]);
     }
@@ -50,9 +56,11 @@ class LibroController extends Controller
         $libros = DB::table('libros as lib')
         ->join('users AS usu', 'lib.usuario', '=', 'usu.id')
         ->select('lib.titulo AS titulo', 'lib.genero AS genero', 'lib.descripcion AS descripcion', 
-        'lib.imagen AS imagen', 'lib.enlace_libro AS enlace_libro', 'lib.autor AS autor', 'usu.name AS subido_por')
+        'lib.imagen AS imagen', 'lib.enlace_libro AS enlace_libro', 'lib.autor AS autor', 
+        'lib.created_at', 'usu.name AS subido_por')
         ->where('lib.genero', "ensayo")
-        ->Paginate(2);
+        ->get();
+        //->Paginate(2);
 
         return view('libros.listadoPorGenero', ["libros"=>$libros, "genero"=>$genero]);
     }
@@ -64,9 +72,11 @@ class LibroController extends Controller
         $libros = DB::table('libros as lib')
         ->join('users AS usu', 'lib.usuario', '=', 'usu.id')
         ->select('lib.titulo AS titulo', 'lib.genero AS genero', 'lib.descripcion AS descripcion', 
-        'lib.imagen AS imagen', 'lib.enlace_libro AS enlace_libro', 'lib.autor AS autor', 'usu.name AS subido_por')
+        'lib.imagen AS imagen', 'lib.enlace_libro AS enlace_libro', 'lib.autor AS autor', 
+        'lib.created_at', 'usu.name AS subido_por')
         ->where('lib.genero', "poesia")
-        ->Paginate(15);
+        ->get();
+        //->Paginate(15);
 
         return view('libros.listadoPorGenero', ["libros"=>$libros, "genero"=>$genero]);
         //return response()->json('hola');

@@ -8,6 +8,7 @@
         <table class="table table-info table-striped table-bordered table-hover" id="tabla_resultados">
             <thead>
                 <tr>
+                    <th>Fecha Alta:</th>
                     <th>Titulo</th>
                     <th>Descripcion</th>
                     <th>Autor</th>
@@ -20,6 +21,7 @@
 
             @foreach ($libros as $libro)
                 <tr>
+                    <td>{{date("d/m/Y", strtotime($libro->created_at))}}</td>
                     <td>{{$libro->titulo}}</td>
                     <td>{{$libro->descripcion}}</td>
                     <td>{{$libro->autor}}</td>
@@ -35,13 +37,7 @@
     @endif
 </div>
 </div>
-@if ($libros->hasMorePages())
-<section>
-    <div class="botonera_y_paginacion">
-        {{$libros->links()}}
-    </div>
-</section>
-@endif
+
 
 
 <script>
