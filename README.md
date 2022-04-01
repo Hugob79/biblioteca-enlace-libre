@@ -1,7 +1,7 @@
 # 01/04/2022: AVISO IMPORTANTE ESTE REPOSITORIO ESTA DESACTUALIZADO. Sigo trabajando en Gitlab
 https://gitlab.com/enlacepilar/biblioteca-enlace-libre.git
 
-Podes ver la wev funcionando en una Raspberri Pi:
+Podes ver la web funcionando en una Raspberri Pi:
 https://biblioteca-enlacelibre.duckdns.org/
 ## biblioteca-enlace-libre
 
